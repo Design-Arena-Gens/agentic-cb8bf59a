@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  @apply font-sans bg-slate-100 text-slate-900 transition-colors duration-200 ease-out;
+}
+
+.dark body {
+  @apply bg-graphite-900 text-slate-100;
+}
+
+#root,
+html,
+body {
+  height: 100%;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: theme("colors.graphite.500") transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(148, 163, 184, 0.5);
+  border-radius: 9999px;
+}
